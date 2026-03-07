@@ -61,4 +61,4 @@ export const sendMessage=async(req,res)=>{
         console.log("Error in the  sendMessage controller",error.message);
         res.status(500).json({error:"Internal server Error "});
     }
-}
+};
