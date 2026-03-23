@@ -1,17 +1,5 @@
-import daisyui from 'daisyui';
+export const THEMES=[
 
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [daisyui],
-  daisyui:{
-    themes: [
       "light",
       "dark",
       "cupcake",
@@ -44,6 +32,4 @@ export default {
       "dim",
       "nord",
       "sunset",
-    ],
-  },
-}
+];
