@@ -20,13 +20,13 @@ export const getMessages=async(req,res)=>{
         const {id:userToChatId}=req.params
         const myId=req.user._id;
 
-        const message=await Message.find({
+        const messages=await Message.find({
             $or:[
                 {senderId:myId, receiverId:userToChatId},
                 {senderId:userToChatId,receiverId:myId}
             ]
         })
-        req.status(200).json(messages);
+        res.status(200).json(messages);
 
     } catch (error) {
         console.log("Error in getMessage constroller:",error.message);
